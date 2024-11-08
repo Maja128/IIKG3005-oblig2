@@ -8,7 +8,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "maja-rg-backend-tfstate"
-    storage_account_name = "sabetfsen0fmtsoso"
+    storage_account_name = "sabetfs5biilx9phq"
     container_name       = "tfstate"
     key                  = "backend.terraform.tfstate"
   }
