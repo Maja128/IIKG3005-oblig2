@@ -37,7 +37,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-dev"
+        run: terraform apply -var="rg_name=maja-rg-dev" -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
 
   staging:
@@ -60,7 +60,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-staging"
+        run: terraform apply -var="rg_name=maja-rg-staging" -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
 
   prod:
@@ -85,5 +85,5 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-prod"
+        run: terraform apply -var="rg_name=maja-rg-prod" -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
