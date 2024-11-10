@@ -39,12 +39,6 @@ jobs:
       - name: Terraform validate
         run: terraform validate
         working-directory: ${{ env.WORKING_DIR }}
-
-      - name: Tfsec
-        uses: aquasecurity/tfsec-action@v1.0.3
-        with:
-          working_directory: ${{ env.WORKING_DIR }}
-          github_token: ${{ env.GITHUB_TOKEN }}
   
   storage:
     runs-on: ubuntu-latest
@@ -66,12 +60,6 @@ jobs:
       - name: Terraform validate
         run: terraform validate
         working-directory: ${{ env.WORKING_DIR }}
-
-      - name: Tfsec
-        uses: aquasecurity/tfsec-action@v1.0.3
-        with:
-          working_directory: ${{ env.WORKING_DIR }}
-          github_token: ${{ env.GITHUB_TOKEN }}
   
   core_infrastructure:
     runs-on: ubuntu-latest
@@ -94,6 +82,7 @@ jobs:
         run: terraform validate
         working-directory: ${{ env.WORKING_DIR }}
 
+      # tfsec checks more than just the current folder, and therefore does not need to be run more than once
       - name: Tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
