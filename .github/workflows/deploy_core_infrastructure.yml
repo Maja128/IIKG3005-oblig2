@@ -29,7 +29,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform workspace select or create dev
-        run: terraform workspace select dev || terraform workspace new dev
+        run: terraform workspace select -or-create dev
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
@@ -52,7 +52,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform workspace select or create staging
-        run: terraform workspace select staging || terraform workspace new staging
+        run: terraform workspace select -or-create staging
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
@@ -77,7 +77,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform workspace select or create prod
-        run: terraform workspace select prod || terraform workspace new prod
+        run: terraform workspace select -or-create prod
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
