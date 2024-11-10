@@ -6,6 +6,7 @@ on:
       - 'main'
     paths:
       - 'modules/networking/**'
+      - 'modules/storage/**'
       - 'core_infrastructure/**'
   workflow_dispatch:
 
