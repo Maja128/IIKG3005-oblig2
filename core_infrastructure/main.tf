@@ -25,7 +25,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "networking" {
-  source   = "../modules/networking"
-  rg_name   = azurerm_resource_group.rg.name
+  source      = "../modules/networking"
+  rg_name     = azurerm_resource_group.rg.name
   rg_location = azurerm_resource_group.rg.location
 }

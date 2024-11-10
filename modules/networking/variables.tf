@@ -1,6 +1,6 @@
 variable "rg_name" {
   type        = string
-  description = "The name og the resource group"
+  description = "The name of the resource group"
 }
 
 variable "rg_location" {
