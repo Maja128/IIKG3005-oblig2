@@ -29,3 +29,9 @@ module "networking" {
   rg_name     = azurerm_resource_group.rg.name
   rg_location = azurerm_resource_group.rg.location
 }
+
+module "storage" {
+  source      = "../modules/storage"
+  rg_name     = azurerm_resource_group.rg.name
+  rg_location = azurerm_resource_group.rg.location
+}
