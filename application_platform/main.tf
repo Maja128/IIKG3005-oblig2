@@ -29,3 +29,9 @@ module "database" {
   rg_name     = azurerm_resource_group.rg.name
   rg_location = azurerm_resource_group.rg.location
 }
+
+module "app_service" {
+  source      = "../modules/app_service"
+  rg_name     = azurerm_resource_group.rg.name
+  rg_location = azurerm_resource_group.rg.location
+}
