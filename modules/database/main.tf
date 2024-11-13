@@ -17,7 +17,7 @@ data "azurerm_key_vault_secret" "kv_password" {
 
 #tfsec:ignore:azure-database-enable-audit
 resource "azurerm_mssql_server" "mssql_server" {
-  name                          = var.mssql_server_name
+  name                          = "${var.mssql_server_name}-${terraform.workspace}"
   resource_group_name           = var.rg_name
   location                      = var.rg_location
   version                       = "12.0"
