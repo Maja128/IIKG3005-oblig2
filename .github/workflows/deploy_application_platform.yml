@@ -33,7 +33,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
@@ -56,7 +56,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
@@ -81,7 +81,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
