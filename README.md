@@ -1,1 +1,5 @@
 # IIKG3005-oblig2
+
+This projects includes app service, ms sql database, network and storage modules. The app service and database can be deployed in ./application_platform, and the network and storage can be deployed in ./core_infrastructure. The tfstate files are stored in a backend in Azure, and the database admin username and password is also stored there. If the project is to be deployed with another backend, the username and password would have to be manually imported to a key vault in the backend. This is done to avoid displaying it in plaintext during the deployment.
+
+There are also four workflows used for continuos integration, and these can be found in ./.github/workflows. Here, code pushed to feature branches are validated, and code that is merged to the main branch are deployd in dev, staging and prod workspaces. This project can also be found on Github at [https://github.com/Maja128/IIKG3005-oblig2](https://github.com/Maja128/IIKG3005-oblig2).
