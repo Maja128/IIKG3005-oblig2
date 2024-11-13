@@ -1,7 +1,7 @@
 variable "rg_name" {
   type        = string
   description = "The name of the resource group"
-  default     = "maja-rg-default"
+  default     = "maja-rgå-core-infrastructure"
 }
 
 variable "rg_location" {

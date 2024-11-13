@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Terraform init
         run: terraform init
@@ -34,11 +34,11 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan -var="rg_name=maja-rg-dev"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-dev" -auto-approve
+        run: terraform apply -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
 
   staging:
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Chekcout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Terraform init
         run: terraform init
@@ -57,11 +57,11 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan -var="rg_name=maja-rg-staging"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-staging" -auto-approve
+        run: terraform apply -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
 
   prod:
@@ -71,7 +71,7 @@ jobs:
       name: production
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Terraform init
         run: terraform init
@@ -82,9 +82,9 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform plan
-        run: terraform plan -var="rg_name=maja-rg-prod"
+        run: terraform plan
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Terraform apply
-        run: terraform apply -var="rg_name=maja-rg-prod" -auto-approve
+        run: terraform apply -auto-approve
         working-directory: ${{ env.WORKING_DIR }}
